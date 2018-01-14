@@ -12,6 +12,8 @@
 */
 use App\Http\Middleware\CheckAge;
 
+Route::get('mail', 'MailController@getSend');
+
 Route::get('/', function () {
     return view('welcome');
 })->middleware(CheckAge::class);
